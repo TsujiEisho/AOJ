@@ -1,5 +1,14 @@
 """
-p < sだから
-pの先頭から数文字目までがsの後ろ数文字と重複するかチェック。
-それ以外がsの先頭と重複するかチェック。
+文字列sを二個並べたものの中にpがあるかどうかで判定できる。
 """
+
+
+s = str(input())
+p = str(input())
+
+s = s*2
+for i in range(len(s)-len(p)):
+    if s[i:i+len(p)] == p:
+        print("Yes")
+        exit()
+print("No")
